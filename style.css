@@ -1,0 +1,110 @@
+:root {
+    --suelo: rgb(163, 163, 163);
+    --pasto: rgb(13, 156, 0);
+    --sala-luz: rgb(201, 201, 201);
+    --sala-sombra: rgb(173, 173, 173);
+    --vidrio-luz: rgb(149, 248, 255);
+    --vidrio-sombra: rgb(100, 189, 192);
+    --blanco-luz: rgb(235, 235, 235);
+    --blanco-sobra: rgb(182, 182, 182);
+    --madera-luz: rgb(197, 136, 4);
+    --madera-sombra: rgb(155, 106, 0);
+    --cocina-luz: rgb(94, 94, 94);
+    --cocina-sombra: rgb(66, 66, 66); 
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: rgb(108, 149, 254);
+}
+.container-gral {
+    background: url(img/clouds.jpeg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    width: 720px;
+    height: 720px;
+    margin: 20px auto 0 auto;
+}
+.suelo {
+    position: absolute;
+    background-color: var(--suelo);
+    width: 720px;
+    height: 340px;
+    bottom: 0;
+}
+.pasto {
+    position: absolute;
+    background-color: var(--pasto);
+    width: 500px;
+    height: 150px;
+    bottom: 80px;
+    left: 120px;
+    transform: skew(-50deg);
+}
+/* ---- VIDRIOS ---- */
+.vidrio-luz {
+    position: absolute;
+    background-color: var(--vidrio-luz);
+
+}
+.vidrio-sombra {
+    position: absolute;
+    background-color: var(--vidrio-sombra);
+}
+/* ---- SALA ---- */
+.sala-pared-front {
+    position: absolute;
+    background-color: var(--sala-luz);
+    width: 200px;
+    height: 300px;
+    bottom: 120px;
+    left: 300px;
+}
+.sala-vidrio-luz-1 {
+    width: 120px;
+    height: 100px;
+    top: 20px;
+    left: 40px;
+}
+.sala-vidrio-luz-2 {
+    width: 120px;
+    height: 100px;
+    bottom: 0;
+    left: 40px;
+}
+.sala-pared-sombra {
+    position: absolute;
+    background-color: var(--sala-sombra);
+    width: 100px;
+    height: 300px;
+    transform: skewY(-40deg);
+    bottom: 161px;
+    left: 500px;
+    z-index: 1;
+}
+.sala-vidrio-sombra-1 {
+    width: 20px;
+    height: 100px;
+    z-index: 2;
+    top: 20px;
+    left: 20px;
+}
+.sala-vidrio-sombra-2 {
+    width: 20px;
+    height: 100px;
+    z-index: 2;
+    top: 20px;
+    left: 60px;
+}
+.sala-vidrio-sombra-3 {
+    width: 60px;
+    height: 100px;
+    bottom: 0;
+    z-index: 2;
+    left: 20px;
+}
