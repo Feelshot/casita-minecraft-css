@@ -9,7 +9,8 @@
     --blanco-sobra: rgb(182, 182, 182);
     --blanco-suelo: rgb(128, 126, 126);
     --madera-luz: rgb(197, 136, 4);
-    --madera-sombra: rgb(155, 106, 0);
+    --madera-sombra: rgb(117, 80, 0);
+    --madera-top: rgb(155, 106, 0);
     --cocina-luz: rgb(94, 94, 94);
     --cocina-sombra: rgb(66, 66, 66); 
 }
@@ -37,6 +38,7 @@ body {
 .cocina {z-index: 2;}
 .madera {z-index: 3;}
 .balcon { z-index: 4;}
+.madera-techo {z-index: 6;}
 
 /* ---- SUELO ---- */
 .suelo {
@@ -103,21 +105,21 @@ body {
     height: 100px;
     z-index: 2;
     top: 20px;
-    left: 20px;
+    left: 30px;
 }
 .sala-vidrio-sombra-2 {
     width: 20px;
     height: 100px;
     z-index: 2;
     top: 20px;
-    left: 60px;
+    left: 70px;
 }
 .sala-vidrio-sombra-3 {
-    width: 60px;
+    width: 50px;
     height: 100px;
     bottom: 0;
     z-index: 2;
-    left: 20px;
+    left: 30px;
 }
 
 /* ---- COCINA ---- */
@@ -174,6 +176,7 @@ body {
     transform: skewX(-50deg);
     bottom: 248px;
     left: 125px;
+    z-index: 3;
 }
 .balcon-pared-left {
     background-color: var(--blanco-luz);
@@ -189,7 +192,7 @@ body {
     bottom: 256px;
     left: 140px;
     transform: skewY(-40deg);
-
+    z-index: 3;
 }
 .balcon-pared-top {
     background-color: var(--blanco-luz);
@@ -197,20 +200,35 @@ body {
     height: 30px;
     top: 280px;
     left: 110px;
+    z-index: 5;
 }
 .balcon-pared-top-sombra {
     background-color: var(--blanco-sobra);
-    width: 120px;
+    width: 140px;
     height: 30px;
-    transform: skewY(-41deg);
-    top: 228px;
+    transform: skewY(-39deg);
+    top: 223px;
     left: 290px;
+    z-index: 5;
 
 }
 .balcon-techo {
     background-color: var(--blanco-suelo);
+    width: 181px;
+    height: 114px;
+    transform: skew(-51deg);
+    top: 166px;
+    left: 180px;
 }
+.balcon-pared-fondo {
+    background-color: var(--blanco-sobra);
+    width: 20px;
+    height: 20px;
+    top: 190px;
+    left: 410px;
+    z-index: 2;
 
+}
 /* ---- MADERA CUARTO ---- */
 .cuarto-linea-top {
     background-color: var(--madera-luz);
@@ -218,6 +236,76 @@ body {
     height: 20px;
     top: 300px;
     left: 160px;
+    z-index: 4;
+}
+.cuarto-linea-top-sombra {
+    background-color: var(--madera-sombra);
+    width: 120px;
+    height: 20px;
+    top: 252px;
+    left: 520px;
+    transform: skewY(-39deg);
+}
+.cuarto-techo {
+    background-color: var(--madera-top);
+    width: 262px;
+    height: 96px;
+    bottom: 420px;
+    left: 318px;
+    transform: skewX(-51deg);
+}
+.cuarto-pared-luz {
+    background-color: var(--madera-luz);
+    width: 130px;
+    height: 154px;
+    top: 310px;
+    left: 150px;
+    z-index: 3;
+}
+.cuarto-pared-sombra {
+    background-color: var(--madera-sombra);
+    width: 20px;
+    height: 166px;
+    top: 290px;
+    left: 280px;
+    transform: skewY(-40deg);
+}
+.cuarto-vidrio-luz-1 {
+    width: 30px;
+    height: 120px;
+    left: 20px;
+    top: 20px;
+}
+.cuarto-vidrio-luz-2 {
+    width: 30px;
+    height: 120px;
+    left: 80px;
+    top: 20px;
+
 }
 
 /* ---- MADERA TECHO ---- */
+
+.techo-madera-luz {
+    background-color: var(--madera-luz);
+    width: 190px;
+    height: 20px;
+    top: 270px;
+    left: 314px;
+}
+.techo-madera-sombra {
+    background-color: var(--madera-sombra);
+    width: 100px;
+    height: 20px;
+    bottom: 470px;
+    left: 504px;
+    transform: skewY(-39deg);
+}
+.techo-madera {
+    background-color: var(--madera-top);
+    width: 190px;
+    height: 80px;
+    bottom: 450px;
+    left: 364px;
+    transform: skewX(-51deg); 
+}
