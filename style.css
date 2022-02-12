@@ -1,18 +1,18 @@
 :root {
     --suelo: rgb(163, 163, 163);
     --pasto: rgb(13, 156, 0);
-    --sala-luz: rgb(251, 255, 0);
-    --sala-sombra: rgb(161, 151, 0);
-    --vidrio-luz: rgb(149, 248, 255);
-    --vidrio-sombra: rgb(100, 189, 192);
+    --sala-luz: rgb(97, 97, 97);
+    --sala-sombra: rgb(63, 63, 63);
+    --vidrio-luz: rgb(32, 224, 238);
+    --vidrio-sombra: rgb(22, 126, 129);
     --blanco-luz: rgb(235, 235, 235);
     --blanco-sobra: rgb(182, 182, 182);
     --blanco-suelo: rgb(128, 126, 126);
     --madera-luz: rgb(197, 136, 4);
     --madera-sombra: rgb(117, 80, 0);
     --madera-top: rgb(155, 106, 0);
-    --cocina-luz: rgb(94, 94, 94);
-    --cocina-sombra: rgb(66, 66, 66); 
+    --cocina-luz: rgb(143, 143, 143);
+    --cocina-sombra: rgb(110, 110, 110); 
 }
 * {
     margin: 0;
@@ -21,7 +21,7 @@
 body {
     background-size: 100%;
     background-repeat: no-repeat;
-    background-color: rgb(108, 149, 254);
+    background-color: rgb(105, 148, 254);
 }
 .container-gral {
     background: url(img/clouds.jpeg);
@@ -30,7 +30,7 @@ body {
     position: relative;
     width: 720px;
     height: 720px;
-    margin: 20px auto 0 auto;
+    margin: 10px auto 0 auto;
 }
 /* ---- Z Index Gral ---- */
 
@@ -45,17 +45,19 @@ body {
     position: absolute;
     background-color: var(--suelo);
     width: 720px;
-    height: 340px;
-    bottom: 0;
+    height: 380px;
+    left: 0px;
+    top: 380px;
 }
 .pasto {
     position: absolute;
-    background-color: var(--pasto);
-    width: 500px;
+    background: url(img/pasto.jpeg);
+    background-size: 20%;
+    width: 520px;
     height: 150px;
-    bottom: 80px;
-    left: 120px;
-    transform: skew(-50deg);
+    bottom: 120px;
+    left: 100px;
+    transform: skew(-51deg);
 }
 .position {
     position: absolute;
@@ -63,12 +65,13 @@ body {
 /* ---- VIDRIOS ---- */
 .vidrio-luz {
     position: absolute;
-    background-color: var(--vidrio-luz);
-
+    background: url(img/cristal.png);
+    background-size: 100%;
 }
 .vidrio-sombra {
     position: absolute;
-    background-color: var(--vidrio-sombra);
+    background: url(img/cristal.png);
+    background-size: 100%;
 }
 /* ---- SALA ---- */
 .sala-pared-front {
@@ -81,15 +84,17 @@ body {
 }
 .sala-vidrio-luz-1 {
     width: 120px;
-    height: 100px;
+    height: 120px;
     top: 20px;
     left: 40px;
+    background-size: 25%;
 }
 .sala-vidrio-luz-2 {
     width: 120px;
     height: 100px;
     bottom: 0;
     left: 40px;
+    background-size: 25%;
 }
 .sala-pared-sombra {
     position: absolute;
@@ -115,11 +120,12 @@ body {
     left: 70px;
 }
 .sala-vidrio-sombra-3 {
-    width: 50px;
+    width: 54px;
     height: 100px;
     bottom: 0;
     z-index: 2;
     left: 30px;
+    background-size: 33%;
 }
 
 /* ---- COCINA ---- */
